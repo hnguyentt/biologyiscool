@@ -2,10 +2,21 @@
   
     
         "post0": {
+            "title": "Water",
+            "content": "Structure . Lewis structure | Bond: Polar covalent bond | Water is an amazing sovent | . Hydrogen bonds . Water molecules can attach to each other to form hydrogen bonds. It is because of polar covalent bond between O (-) and H (+) | . (Image source: https://socratic.org/questions/what-are-some-examples-of-hydrogen-bonds) . Cohesion . Attraction of 2 like-things. For example, the attraction between water molecules. | Water has the highest cohesion of any non-metallic liquid. It can be seen when put water on some wax paper or some Teflon. That’s because water adheres weakly to the wax paper or to Teflon, but strongly to itself (kind of narcissitic), the water molecules are holding those droplets together in a configuration that creates the smallest surface area. | . Adhesion . Attraction between 2 different things. For example water and glasses. The adhesive forces between the water and the glass are stronger than the cohesive forces. | . Capillary Action . Thanks to adhesion, the water molecules are attracted to the molecules in the straw. | As the water molecules adhere to the straw, other molecules are drawn in by cohesion, following those fellow water molecules. | . Hydrophylic . Substances that are polar and their polarity is stronger than the cohesive forces of the water. | When put one of these polar substances in water, it’s strong enough that it breaks all the cohesive forces, all those little hydrogen bonds, and instead hydrogen bonding each other the water will hydrogen bond around these polar substances. | Examples: $NaCl$, $KF$, etc. | . Hydrophobic . Substances that lack charged poles, non-polar and are not dissolving in water because essentially they’re being pushed out of the water by water cohesive forces. | Examples: steroids | . Biography: Henry Cavendish . The first person to recognize hydrogen gas as a distinct substance and determin the composition of water. | In the 1700s, most people thought that water itself was an element, but Cavendish observed that hydrogen – which he called inflammable air, reacted with oxygen – known then by “dephlogisticated aire” – to form water. | Cavendish didn’t totally understand his discovery as he didn’t believe in chemical compounds and explained his experiments with hydrogen in terms of a fire-like element called “phlogiston”. After his deadth, researchers figured out that Cavendish had actually pre-discovered Ritcher’s law, Ohm’s law, Coulomb’s law. | . Ice density . Solid water is less dense than liquid while the everything else is exact opposite of that. | It is because of hydrogen bonds. At around 32 degrees Fahrenheit (0 degree Celcius), water molecules start to solidify and the hydrogen bonds in those water molecules form crystalline structures that space molecules apart more evenly, in turn making frozen water less dense that the liquid form. | . (Image source: https://johncarlosbaez.wordpress.com/2012/04/15/ice/) . It is lucky that the ice is floating. Just imaging all the ice in the North Pole sink, the sea level will be up, put many areas in the water. | . Heat Capacity . Water has a very high heat capacity, it means that water is really good at holding on to heat. Therefore, it is hard to heat up or cool down the ocean significantly. | The ocean become giant heat sinks that regulate the temperature and the climate of our planet. | When water evaporate from your skin, it cools you down. That’s the principal behind sweating. | .",
+            "url": "https://nguyenhoa93.github.io/biologyiscool/basic/2020/11/03/Water.html",
+            "relUrl": "/basic/2020/11/03/Water.html",
+            "date": " • Nov 3, 2020"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "Carbon - Chemistry & Energy",
             "content": "About carbon . Foundation of biology. | 6 proton + 6 neutron + 6 electron . | Two electron shells: 2 electrons locate on the first shell and 4 locate on the outer shell. . | Lewis dot structure | . Gilbert Lewis . The scientist behind these famous terms: . Lewis dot structure | Valency theory | Lewis acids and bases | . Some facts about him: He was nominated 35 times for Nobel’s Prize but ended up with zero prize. What a great man! . Octet Rule . Each atom needs 8 electrons in the outer shell … to be fulfilled and happy. . This is a rule of thumb for a “happy relationship” among atoms to form a long-lasting family (molecule). . Types of bonding . Covalent bonds . When atoms share electrons with each other. Ex: $CH_{4}$, $O_{2}$, $NH_{4}$ . Non-polar covalent bond. Ex: $O_{2}$ | Polar covalent bond: there exists negative and positive pole. Ex: $NH_{4}$ | . Amino acids are formed by covalent bonds. . Ionic bonds . do not share electrons | donate or accept electrons | live as a charged atom or ion | . Alkali metals + Halogens . Examples: $NaCl$, $KF$, etc. . Hydrogen bonds . Some molecules formed by polar covalent bonds can stick together. | Example: $H_{2}O$ References . | Lecture: Crash course | Britannia: Carbon chemical element | .",
-            "url": "https://nguyenhoa93.github.io/biologyiscool/markdown/2020/11/02/Carbon.html",
-            "relUrl": "/markdown/2020/11/02/Carbon.html",
+            "url": "https://nguyenhoa93.github.io/biologyiscool/basic/2020/11/02/Carbon.html",
+            "relUrl": "/basic/2020/11/02/Carbon.html",
             "date": " • Nov 2, 2020"
         }
         
@@ -20,7 +31,7 @@
   
       ,"page2": {
           "title": "Overview",
-          "content": "A TOC goes here. . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "content": "TopicLink . Crash courses | Carbon | link | . Water | link | . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://nguyenhoa93.github.io/biologyiscool/overview/",
           "relUrl": "/overview/",
           "date": ""
