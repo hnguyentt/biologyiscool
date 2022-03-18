@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Seqence Alignment (Theory) | Biology Is Cool</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Seqence Alignment (Theory)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Indentifying the similarity between sequences that may be related to functional, structural, or evolutionary relationships." />
+<meta property="og:description" content="Indentifying the similarity between sequences that may be related to functional, structural, or evolutionary relationships." />
+<link rel="canonical" href="https://nguyenhoa93.github.io/biologyiscool/bioinformatics/2022/03/14/Sequence-Alignment.html" />
+<meta property="og:url" content="https://nguyenhoa93.github.io/biologyiscool/bioinformatics/2022/03/14/Sequence-Alignment.html" />
+<meta property="og:site_name" content="Biology Is Cool" />
+<meta property="og:image" content="https://nguyenhoa93.github.io/biologyiscool/images/20220314-SeqAlign/03-SeqAlign.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-14T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://nguyenhoa93.github.io/biologyiscool/bioinformatics/2022/03/14/Sequence-Alignment.html","@type":"BlogPosting","headline":"Seqence Alignment (Theory)","dateModified":"2022-03-14T00:00:00-05:00","datePublished":"2022-03-14T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://nguyenhoa93.github.io/biologyiscool/bioinformatics/2022/03/14/Sequence-Alignment.html"},"image":"https://nguyenhoa93.github.io/biologyiscool/images/20220314-SeqAlign/03-SeqAlign.png","description":"Indentifying the similarity between sequences that may be related to functional, structural, or evolutionary relationships.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/biologyiscool/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nguyenhoa93.github.io/biologyiscool/feed.xml" title="Biology Is Cool" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-163167506-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/biologyiscool/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/biologyiscool/">Biology Is Cool</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+            <a class="page-link" href="https://github.com/nguyenhoa93/biologyiscool/"><svg class="octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+            <a class="page-link" href="https://nguyenhoa93.github.io/">Main Page</a><a class="page-link" href="/biologyiscool/overview/">Overview</a><a class="page-link" href="/biologyiscool/search/">Search</a><a class="page-link" href="/biologyiscool/categories/">Tags</a></div>
+        </nav></div>
+  </header><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <head>
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
+>
+</script>
+
+</head>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Seqence Alignment (Theory)</h1><p class="page-description">Indentifying the similarity between sequences that may be related to functional, structural, or evolutionary relationships.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-03-14T00:00:00-05:00" itemprop="datePublished">
+        Mar 14, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/biologyiscool/categories/#bioinformatics">bioinformatics</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#definition">Definition</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#sequence">Sequence</a></li>
+<li class="toc-entry toc-h3"><a href="#sequence-alignment">Sequence Alignment</a></li>
+<li class="toc-entry toc-h3"><a href="#sequence-similarity--sequence-indentity">Sequence Similarity &amp; Sequence Indentity</a></li>
+<li class="toc-entry toc-h3"><a href="#question">Question:</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#why-sequence-alignment">Why sequence alignment?</a></li>
+<li class="toc-entry toc-h2"><a href="#interpretation">Interpretation</a></li>
+<li class="toc-entry toc-h2"><a href="#algorithms">Algorithms</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#pairwise-alignment">Pairwise Alignment</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#dot-plot">Dot plot</a></li>
+<li class="toc-entry toc-h4"><a href="#dynamic-programming">Dynamic Programming</a></li>
+<li class="toc-entry toc-h4"><a href="#word-method">Word method</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#multiple-sequence-alignment-msa">Multiple Sequence Alignment (MSA)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#tools">Tools</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul><h2 id="definition">
+<a class="anchor" href="#definition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Definition</h2>
+<h3 id="sequence">
+<a class="anchor" href="#sequence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sequence</h3>
+<ul>
+  <li>An arrangement of two or more <strong>related things</strong> in a successive order.</li>
+  <li>
+<strong>Related things</strong>:
+    <ul>
+      <li>DNA (base pairs as ACTG)</li>
+      <li>RNA (base pairs as ACUG)</li>
+      <li>proteins (amino acids)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./../images/20220314-SeqAlign/01-SeqAlign-Transcription&amp;Translation.png" width="500"></p>
+
+<h3 id="sequence-alignment">
+<a class="anchor" href="#sequence-alignment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sequence Alignment</h3>
+<ul>
+  <li>Arranging the sequences of DNA, RNA, or proteins to identify regions of similarity and identity that may be consequence of functional, structural, or evolutionary relationships.</li>
+  <li>Probably the most important and most accomplished in bioinformatics.</li>
+  <li>Ultimate goal: determine the similarity between different sequences.</li>
+</ul>
+
+<h3 id="sequence-similarity--sequence-indentity">
+<a class="anchor" href="#sequence-similarity--sequence-indentity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sequence Similarity &amp; Sequence Indentity</h3>
+<ul>
+  <li>
+<strong>DNA &amp; RNA</strong>: sequence similarity and sequence identity are the same.</li>
+  <li>
+<strong>Protein</strong>:
+    <ul>
+      <li>Identity: % of exact matches between two aligned sequences.</li>
+      <li>Similarity: % of aligned residues that share similar characteristics.
+<strong><em>Similar characteristics:</em></strong>
+<img src="../images/20220314-SeqAlign/02-SeqAlign-SimilarCharacteristics.png" width="500">
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="question">
+<a class="anchor" href="#question" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question:</h3>
+<blockquote>
+  <p>In terms of identity distance measure, if sequence A = B and B = C; then, would A be equal to C?</p>
+</blockquote>
+
+<p><img src="./../images/20220314-SeqAlign/03-SeqAlign-Question.png" alt="quest"></p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">Identity(A,B) = 100%</code> ($\frac{\text{5 identical nucleotides}}{min(length(A), length(B))}$).</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Identity(B,C) = 100%</code> ($\frac{\text{5 identical nucleotides}}{min(length(B), length(C))}$).</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Identity(A,C) = 85%</code> ($\frac{\text{6 identical nucleotides}}{7}$).
+Therefore, 100% identity doesn’t mean two sequences are the same.</li>
+</ul>
+
+<h2 id="why-sequence-alignment">
+<a class="anchor" href="#why-sequence-alignment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why sequence alignment?</h2>
+<ul>
+  <li>
+<strong>Gene finding:</strong> if there is a gene in another organism with a good alignment with the open reading frame (ORF), then the ORF is likely a gene.</li>
+  <li>
+<strong>Function prediction</strong>: two genes are similar determined by sequence alignment, the function of one gene is known, we can assign the same function for the other gene.</li>
+  <li><strong>Genome Sequence Assembly</strong></li>
+  <li>
+<strong>Indentifying homologous genes:</strong> both identity and similarity are used to deduce homology.</li>
+</ul>
+
+<h2 id="interpretation">
+<a class="anchor" href="#interpretation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interpretation</h2>
+<ul>
+  <li>If two sequences share a common ancestor, mismatches can be interpreted as <strong><em>point mutations</em></strong> and gaps as <strong><em>indels</em></strong> (insertion or delection mutations)introduced in one or both lineages in the tume since they diverged from one another.</li>
+  <li>In protein sequence alignment, the degree of similarity between amin acids occupying a partcular position in the sequence can be interpreted as a rough measure of how <strong><em>conserved</em></strong> a particular region or sequence motif is among lineages.
+    <ul>
+      <li>the absence of substitutions or the presence of only very conservative substitutions (the substitutions of amino acids whose side chains have simiular biochemical properties) in a particular region, suggest that this region has structural or functional importance.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="algorithms">
+<a class="anchor" href="#algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms</h2>
+<h3 id="pairwise-alignment">
+<a class="anchor" href="#pairwise-alignment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pairwise Alignment</h3>
+<h4 id="dot-plot">
+<a class="anchor" href="#dot-plot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dot plot</h4>
+<blockquote>
+  <ul>
+    <li>Place one sequence on the vertical axis of a 2D grid and the other on the horizontal.</li>
+    <li>Put dots where the two sequences match.</li>
+    <li>Diagonal runs of dots indicate matched segments of sequences.</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>Dot matrices of long sequences are often noisy –&gt; Solution: use a <strong>window</strong> and a <strong>threshold</strong>.
+    <ul>
+      <li>compare character by character within a window</li>
+      <li>require certain fraction of matches within window in order to display it with a dot</li>
+    </ul>
+  </li>
+  <li>Use cases:
+    <ul>
+      <li>Visually assessing the similarity of two protein or two nucleic acid sequences</li>
+      <li>Finding local repeat sequences within a larger sequence by comparing a sequence to itself
+        <h4 id="dynamic-programming">
+<a class="anchor" href="#dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic Programming</h4>
+        <p>||Global Alignment|Local Alignment|
+|—|—|—|—|
+|Algorithm|Needleman-Wunsch|Smith-Waterman|
+|Definition|Find the best posible alignment across entire length of two sequences|Find local region with highest level of similarity|
+|Application|Applied to 2 closely related sequences and approximately same length|Find conserved patterns in DNA or protein sequences|
+—</p>
+        <h4 id="word-method">
+<a class="anchor" href="#word-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Word method</h4>
+      </li>
+    </ul>
+  </li>
+  <li>Known as <strong><em>k-tuple</em></strong>
+</li>
+  <li>heuristic methods that are not guaranteed to find an optimal alignment solution but are significantly more efficient than dynamic programming.</li>
+  <li>Useful in large-scale database searches (FASTA and BLAST)
+    <h3 id="multiple-sequence-alignment-msa">
+<a class="anchor" href="#multiple-sequence-alignment-msa" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiple Sequence Alignment (MSA)</h3>
+  </li>
+</ul>
+
+<h2 id="tools">
+<a class="anchor" href="#tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tools</h2>
+<p>|Priority|Tool|
+|—|—|
+|Speed|BLAST|
+|Accurate statistics|FASTA|
+|Short query sequence|GGSEARCH, GLSEARCH|
+|Speed and interactive search|PSI-BLAST|
+|Accurate and most prone to errors|PSI-Search|
+—</p>
+
+<h2 id="references">
+<a class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
+<ul>
+  <li><a href="https://towardsdatascience.com/pairwise-sequence-alignment-using-biopython-d1a9d0ba861f">Pairwise Sequence Alignment using Biopython</a></li>
+  <li><a href="https://www.youtube.com/watch?v=lu9ScxSejSE">Local Sequence Alignment &amp; Smith-Waterman Algorithm</a></li>
+  <li><a href="https://www.youtube.com/watch?v=ipp-pNRIp4g">Global Sequence Alignment &amp; Needleman-Wunsch Algorithm</a></li>
+  <li><a href="https://www.youtube.com/watch?v=wqsR8qOptto">Sequence similarity and identity</a></li>
+  <li><a href="https://www.youtube.com/watch?v=d9zprAGoCXY">The concept of homology</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Sequence_alignment">Sequence Alignment - Wikipedia</a></li>
+  <li><a href="https://www.youtube.com/watch?v=S07kIY2ihq8">2.2. Alignment dot plots</a></li>
+</ul>
+
+  </div><a class="u-url" href="/biologyiscool/bioinformatics/2022/03/14/Sequence-Alignment.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/biologyiscool/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/biologyiscool/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/biologyiscool/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>This page contains personal notes of my learning journey in the wonderful Biology world. It may be full of flaws so be wide awake when you decide to read. Feedback is welcome.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/nguyenhoa93" target="_blank" title="nguyenhoa93"><svg class="svg-icon grey"><use xlink:href="/biologyiscool/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/BluePeace93" target="_blank" title="BluePeace93"><svg class="svg-icon grey"><use xlink:href="/biologyiscool/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
