@@ -51,47 +51,6 @@ Therefore, 100% identity doesn't mean two sequences are the same.
 * In protein sequence alignment, the degree of similarity between amin acids occupying a partcular position in the sequence can be interpreted as a rough measure of how ***conserved*** a particular region or sequence motif is among lineages.
   * the absence of substitutions or the presence of only very conservative substitutions (the substitutions of amino acids whose side chains have simiular biochemical properties) in a particular region, suggest that this region has structural or functional importance.
 
-<table style="border-collapse:collapse;border-spacing:0" class="tg">
-<thead>
-<tr>
-<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"></th>
-<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Topic</th>
-<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Link</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:middle;word-break:normal" rowspan="3">Crash courses</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Carbon</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><a href="https://nguyenhoa93.github.io/biologyiscool/markdown/2020/11/03/Water.html" target="_blank" rel="noopener noreferrer">link</a></td>
-</tr>
-
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Water</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><a href="https://nguyenhoa93.github.io/biologyiscool/markdown/2020/11/03/Water.html" target="_blank" rel="noopener noreferrer">link</a></td>
-</tr>
-
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Biological Molecules</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><a href="https://nguyenhoa93.github.io/biologyiscool/basic/2020/12/18/Biological-Molecules.html" target="_blank" rel="noopener noreferrer">link</a></td>
-</tr>
-
-</tbody>
-
-<tbody>
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:middle;word-break:normal" rowspan="2">Sequence Alignment</td>
-</tr>
-
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Sequence Alignment (Theory)</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><a href="https://nguyenhoa93.github.io/biologyiscool/bioinformatics/2022/03/14/Sequence-Alignment.html" target="_blank" rel="noopener noreferrer">link</a></td>
-</tr>
-
-</tbody>
-
-</table>
-
 ## Algorithms
 ### Pairwise Alignment
 #### Dot plot
@@ -107,33 +66,30 @@ Therefore, 100% identity doesn't mean two sequences are the same.
   * Finding local repeat sequences within a larger sequence by comparing a sequence to itself
 #### Dynamic Programming
 
-<table style="border-collapse:collapse;border-spacing:0" class="tg">
+<table>
 <thead>
-<tr>
-<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Global Alignment</b></th>
-<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Local Alignment</b></th>
-</tr>
+  <tr>
+    <th></th>
+    <th>Global Alignment</th>
+    <th>Local Alignment</th>
+  </tr>
 </thead>
-
 <tbody>
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Algorithm</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Needleman-Wunsch</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Smith-Waterman</td>
-</tr>
-
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Definition</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Find the best posible alignment across entire length of two sequences</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Find local region with highest level of similarity</td>
-</tr>
-
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Application</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Applied to 2 closely related sequences and approximately same length</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Find conserved patterns in DNA or protein sequences</td>
-</tr>
+  <tr>
+    <td>Algorithm</td>
+    <td>Needleman-Wunsch</td>
+    <td>Smith-Waterman</td>
+  </tr>
+  <tr>
+    <td>Definition</td>
+    <td>Find the best posible alignment across entire length of two sequences</td>
+    <td>Find local region with highest level of similarity</td>
+  </tr>
+  <tr>
+    <td>Application</td>
+    <td>Applied to 2 closely related sequences and approximately same length</td>
+    <td>Find conserved patterns in DNA or protein sequences</td>
+  </tr>
 </tbody>
 </table>
 
@@ -145,40 +101,34 @@ Therefore, 100% identity doesn't mean two sequences are the same.
 
 ## Tools
 
-<table style="border-collapse:collapse;border-spacing:0" class="tg">
+<table>
 <thead>
-<tr>
-<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Priority</b></th>
-<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Tools</b></th>
-</tr>
-</thread>
-
+  <tr>
+    <th>Priority</th>
+    <th>Tools</th>
+  </tr>
+</thead>
 <tbody>
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Speed</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">BLAST</td>
-</tr>
-
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Accurate statistics</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">FASTA</td>
-</tr>
-
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Short query sequence</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">GGSEARCH, GLSEARCH</td>
-</tr>
-
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Speed and interactive search</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">PSI-BLAST</td>
-</tr>
-
-<tr>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Accurate and most prone to errors</td>
-<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">PSI-Search</td>
-</tr>
-
+  <tr>
+    <td>Speed</td>
+    <td>BLAST</td>
+  </tr>
+  <tr>
+    <td>Accurate statistics</td>
+    <td>FASTA</td>
+  </tr>
+  <tr>
+    <td>Short query sequence</td>
+    <td>GGSEARCH, GLSEARCH</td>
+  </tr>
+  <tr>
+    <td>Speed and interactive search</td>
+    <td>PSI-BLAST</td>
+  </tr>
+  <tr>
+    <td>Accurate and most prone to errors</td>
+    <td>PSI-Search</td>
+  </tr>
 </tbody>
 </table>
 

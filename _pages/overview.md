@@ -37,6 +37,7 @@ permalink: /overview/
 <td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:middle;word-break:normal" rowspan="2">Sequence Alignment</td>
 </tr>
 
+<tr>
 <td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Sequence Alignment (Theory)</td>
 <td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><a href="https://nguyenhoa93.github.io/biologyiscool/bioinformatics/2022/03/14/Sequence-Alignment.html" target="_blank" rel="noopener noreferrer">link</a></td>
 </tr>
