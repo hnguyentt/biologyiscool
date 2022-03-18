@@ -65,6 +65,7 @@ Therefore, 100% identity doesn't mean two sequences are the same.
   * Visually assessing the similarity of two protein or two nucleic acid sequences
   * Finding local repeat sequences within a larger sequence by comparing a sequence to itself
 #### Dynamic Programming
+
 <table style="border-collapse:collapse;border-spacing:0" class="tg">
 <thead>
 <tr>
@@ -72,6 +73,8 @@ Therefore, 100% identity doesn't mean two sequences are the same.
 <th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Global Alignment</b></th>
 <th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Local Alignment</b></th>
 </tr>
+</thead>
+
 <tbody>
 <tr>
 <td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Algorithm</td>
@@ -90,9 +93,7 @@ Therefore, 100% identity doesn't mean two sequences are the same.
 <td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Applied to 2 closely related sequences and approximately same length</td>
 <td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Find conserved patterns in DNA or protein sequences</td>
 </tr>
-
 </tbody>
-</thead>
 </table>
 
 #### Word method
@@ -108,6 +109,8 @@ Therefore, 100% identity doesn't mean two sequences are the same.
 <th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Priority</b></th>
 <th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Tools</b></th>
 </tr>
+</thread>
+
 <tbody>
 <tr>
 <td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Speed</td>
@@ -135,7 +138,6 @@ Therefore, 100% identity doesn't mean two sequences are the same.
 </tr>
 
 </tbody>
-</thead>
 </table>
 
 ## References
