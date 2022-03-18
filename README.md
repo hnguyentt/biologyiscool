@@ -10,4 +10,4 @@ https://nguyenhoa93.github.io/biologyiscool/
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_
 
-My personal know when learning Biology.
+My personal notes in Biology.

@@ -142,14 +142,10 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h4"><a href="#dot-plot">Dot plot</a></li>
 <li class="toc-entry toc-h4"><a href="#dynamic-programming">Dynamic Programming</a></li>
-<li class="toc-entry toc-h4"><a href="#word-method">Word method</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h3"><a href="#multiple-sequence-alignment-msa">Multiple Sequence Alignment (MSA)</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#tools">Tools</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
 </ul><h2 id="definition">
 <a class="anchor" href="#definition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Definition</h2>
 <h3 id="sequence">
@@ -166,7 +162,7 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<p><img src="./../images/20220314-SeqAlign/01-SeqAlign-Transcription&amp;Translation.png" width="500"></p>
+<p><img src="/biologyiscool/images/20220314-SeqAlign/01-SeqAlign-Transcription&amp;Translation.png" width="500"></p>
 
 <h3 id="sequence-alignment">
 <a class="anchor" href="#sequence-alignment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sequence Alignment</h3>
@@ -187,7 +183,7 @@ window.onload = wrap_img;
       <li>Identity: % of exact matches between two aligned sequences.</li>
       <li>Similarity: % of aligned residues that share similar characteristics.
 <strong><em>Similar characteristics:</em></strong>
-<img src="../images/20220314-SeqAlign/02-SeqAlign-SimilarCharacteristics.png" width="500">
+<img src="/biologyiscool/images/20220314-SeqAlign/02-SeqAlign-SimilarCharacteristics.png" width="500">
 </li>
     </ul>
   </li>
@@ -199,7 +195,7 @@ window.onload = wrap_img;
   <p>In terms of identity distance measure, if sequence A = B and B = C; then, would A be equal to C?</p>
 </blockquote>
 
-<p><img src="./../images/20220314-SeqAlign/03-SeqAlign-Question.png" alt="quest"></p>
+<p><img src="/biologyiscool/images/20220314-SeqAlign/03-SeqAlign-Question.png" alt="quest"></p>
 <ul>
   <li>
 <code class="language-plaintext highlighter-rouge">Identity(A,B) = 100%</code> ($\frac{\text{5 identical nucleotides}}{min(length(A), length(B))}$).</li>
@@ -260,48 +256,96 @@ Therefore, 100% identity doesn’t mean two sequences are the same.</li>
       <li>Finding local repeat sequences within a larger sequence by comparing a sequence to itself
         <h4 id="dynamic-programming">
 <a class="anchor" href="#dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic Programming</h4>
-        <p>||Global Alignment|Local Alignment|
-|—|—|—|—|
-|Algorithm|Needleman-Wunsch|Smith-Waterman|
-|Definition|Find the best posible alignment across entire length of two sequences|Find local region with highest level of similarity|
-|Application|Applied to 2 closely related sequences and approximately same length|Find conserved patterns in DNA or protein sequences|
-—</p>
-        <h4 id="word-method">
-<a class="anchor" href="#word-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Word method</h4>
       </li>
     </ul>
   </li>
-  <li>Known as <strong><em>k-tuple</em></strong>
-</li>
-  <li>heuristic methods that are not guaranteed to find an optimal alignment solution but are significantly more efficient than dynamic programming.</li>
-  <li>Useful in large-scale database searches (FASTA and BLAST)
-    <h3 id="multiple-sequence-alignment-msa">
-<a class="anchor" href="#multiple-sequence-alignment-msa" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiple Sequence Alignment (MSA)</h3>
-  </li>
 </ul>
+<table style="border-collapse:collapse;border-spacing:0" class="tg">
+<thead>
+<tr>
+<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+</th>
+<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Global Alignment</b></th>
+<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Local Alignment</b></th>
+&lt;/tr&gt;
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Algorithm</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Needleman-Wunsch</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Smith-Waterman&lt;/a&gt;</td>
+</tr>
 
-<h2 id="tools">
-<a class="anchor" href="#tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tools</h2>
-<p>|Priority|Tool|
-|—|—|
-|Speed|BLAST|
-|Accurate statistics|FASTA|
-|Short query sequence|GGSEARCH, GLSEARCH|
-|Speed and interactive search|PSI-BLAST|
-|Accurate and most prone to errors|PSI-Search|
-—</p>
+<tr>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Definition</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Find the best posible alignment across entire length of two sequences</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Find local region with highest level of similarity&lt;/a&gt;</td>
+</tr>
 
-<h2 id="references">
-<a class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
-<ul>
-  <li><a href="https://towardsdatascience.com/pairwise-sequence-alignment-using-biopython-d1a9d0ba861f">Pairwise Sequence Alignment using Biopython</a></li>
-  <li><a href="https://www.youtube.com/watch?v=lu9ScxSejSE">Local Sequence Alignment &amp; Smith-Waterman Algorithm</a></li>
-  <li><a href="https://www.youtube.com/watch?v=ipp-pNRIp4g">Global Sequence Alignment &amp; Needleman-Wunsch Algorithm</a></li>
-  <li><a href="https://www.youtube.com/watch?v=wqsR8qOptto">Sequence similarity and identity</a></li>
-  <li><a href="https://www.youtube.com/watch?v=d9zprAGoCXY">The concept of homology</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Sequence_alignment">Sequence Alignment - Wikipedia</a></li>
-  <li><a href="https://www.youtube.com/watch?v=S07kIY2ihq8">2.2. Alignment dot plots</a></li>
-</ul>
+<tr>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Application</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Applied to 2 closely related sequences and approximately same length</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Find conserved patterns in DNA or protein sequences&lt;/a&gt;</td>
+</tr>
+
+</tbody>
+&lt;/thead&gt;
+&lt;/table&gt;
+
+#### Word method
+* Known as ***k-tuple***
+* heuristic methods that are not guaranteed to find an optimal alignment solution but are significantly more efficient than dynamic programming.
+* Useful in large-scale database searches (FASTA and BLAST)
+### Multiple Sequence Alignment (MSA)
+
+## Tools
+<table style="border-collapse:collapse;border-spacing:0" class="tg">
+<thead>
+<tr>
+<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Priority</b></th>
+<th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"><b>Tools</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Speed</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">BLAST&lt;/a&gt;</td>
+</tr>
+
+<tr>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Accurate statistics</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">FASTA&lt;/a&gt;</td>
+</tr>
+
+<tr>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Short query sequence</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">GGSEARCH, GLSEARCH&lt;/a&gt;</td>
+</tr>
+
+<tr>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Speed and interactive search</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">PSI-BLAST&lt;/a&gt;</td>
+</tr>
+
+<tr>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">Accurate and most prone to errors</td>
+<td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">PSI-Search&lt;/a&gt;</td>
+</tr>
+
+</tbody>
+
+</table>
+
+## References
+* [Pairwise Sequence Alignment using Biopython](https://towardsdatascience.com/pairwise-sequence-alignment-using-biopython-d1a9d0ba861f)
+* [Local Sequence Alignment &amp; Smith-Waterman Algorithm](https://www.youtube.com/watch?v=lu9ScxSejSE)
+* [Global Sequence Alignment &amp; Needleman-Wunsch Algorithm](https://www.youtube.com/watch?v=ipp-pNRIp4g)
+* [Sequence similarity and identity](https://www.youtube.com/watch?v=wqsR8qOptto)
+* [The concept of homology](https://www.youtube.com/watch?v=d9zprAGoCXY)
+* [Sequence Alignment - Wikipedia](https://en.wikipedia.org/wiki/Sequence_alignment)
+* [2.2. Alignment dot plots](https://www.youtube.com/watch?v=S07kIY2ihq8)
+</table>
 
   </div><a class="u-url" href="/biologyiscool/bioinformatics/2022/03/14/Sequence-Alignment.html" hidden></a>
 </article>
