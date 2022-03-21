@@ -97,7 +97,9 @@ Therefore, 100% identity doesn't mean two sequences are the same.
 * Known as ***k-tuple***
 * heuristic methods that are not guaranteed to find an optimal alignment solution but are significantly more efficient than dynamic programming.
 * Useful in large-scale database searches (FASTA and BLAST)
+  
 ### Multiple Sequence Alignment (MSA)
+* sequence alignment of three or more biological sequences (protein, DNA, RNA)
 
 ## Tools
 
